@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ArthurDelamare/socketio-getting-started/issues"
   },
-  "homepage": "https://github.com/ArthurDelamare/socketio-getting-started#readme"
+  "homepage": "https://github.com/ArthurDelamare/socketio-getting-started#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }
