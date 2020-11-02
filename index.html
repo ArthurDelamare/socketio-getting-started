@@ -21,6 +21,18 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
       var socket = io();
+      document.querySelector('form').onsubmit = (e) => {
+        e.preventDefault(); // prevents page reloading
+        const message = document.querySelector('#m');
+        socket.emit('chat message', message.value);
+        message.value = '';
+      };
+      socket.on('chat message', function(msg){
+        console.log("message received");
+        const li = document.createElement("li");
+        li.innerText = msg;
+        document.querySelector('#messages').append(li);
+      });
     </script>
   </body>
 </html>
